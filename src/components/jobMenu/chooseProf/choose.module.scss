@@ -1,0 +1,18 @@
+.menu{
+    @apply list-none font-mono text-lg text-slate-900;
+    
+}
+.form{
+    @apply border-2 box-border border-black border-solid w-1/2 relative;
+}
+a{
+    text-decoration: none;
+    transition: all 0.5s linear;
+    @apply text-slate-800;
+    &::hover{
+        transform: scale(1.2);
+    }
+}
+.select{
+    @apply absolute top-0 right-0;
+}

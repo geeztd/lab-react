@@ -1,0 +1,13 @@
+.phone_input{
+    @apply flex flex-col w-60 p-5 border-2 border-solid border-slate-400 m-0;
+    div{
+        @apply flex items-center justify-between m-0 mb-2;
+        .img1{
+            @apply w-7 h-5 mr-3 p-0 m-0;
+        }
+        .input{
+            @apply h-full w-52 m-0 p-0;
+        }
+
+    }
+}

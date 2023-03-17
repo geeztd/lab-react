@@ -1,0 +1,9 @@
+table{
+    @apply w-80 mt-10 border-collapse;
+    tr{
+        @apply w-80 border-0 border-b-2 border-solid border-slate-300;
+    }
+    thead,tbody{
+        @apply w-80;
+    }
+}
