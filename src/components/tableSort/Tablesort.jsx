@@ -20,7 +20,8 @@ const Tablesort = () => {
             else {
                 if(a.name < b.name) return 1
                 if(a.name > b.name) return -1
-                return 0} 
+                return 0
+            } 
             case 2: 
                 if(flag) return (+a.stok)-(+b.stok)
                 else return (+b.stok)-(+a.stok)

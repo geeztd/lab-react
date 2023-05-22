@@ -1,11 +1,13 @@
 import React from 'react';
-import Calendar from './components/calendar/Calendar.jsx';
-
+//import Catalog from './components/Catalog/Catalog';
+import Search from './components/search/Search';
+import SingUpForm from './components/form/SingUpForm';
 
 function App() {
   return (
     <div className="App">
-      <Calendar/>
+    <Search/>
+    <SingUpForm/>
     </div>
   );
 }

@@ -1,32 +1,60 @@
 const createDate = (date)=>{
-    const d = date || new Date()
+    const d = date ?? new Date()
     const dayNumber = d.getDate()
-    const dayName = d.toLocaleDateString(`default`,{weekday:`short`})
     const year = d.getFullYear()
     const month = d.toLocaleDateString(`default`,{month:`long`})
-    const monthNumber = d.getMonth()+1
     const monthIndex = d.getMonth()
-    const week = getWeekNumber(d)
-    return [d,dayName,dayNumber,year,month,monthNumber,week,monthIndex];
+    const dayNumberInWeek = d.getDay() -1
+    return [d,dayNumber,year,month,monthIndex,dayNumberInWeek];
 }
 
-const getWeekNumber = (date)=>{
-    const firstDayOfYear = new Date(date.getFullYear(),0,1)
-    const pastDaysYear = (date.getTime()- firstDayOfYear.getTime())/86400000
+const createMounth = (date)=>{
     
-    return Math.ceil((pastDaysYear + firstDayOfYear.getDay()+1)/7)
-}
-export const createMounth = ()=>{
-    
-    const d = createDate()
-    const getDay = (dayNumber) => createDate(new Date(d[3],d[7],dayNumber))
-    const getDaysNumderOfMounth = ()=> new Date(d[3],d[7]+1,0).getDate()
+    const d = date?createDate(date):createDate()
+    const getDay = (dayNumber) => createDate(new Date(d[2],d[4],dayNumber))
+    const getDaysNumderOfMounth = ()=> new Date(d[2],d[4]+1,0).getDate()
 
     const days = []
 
     for(let i = 0;i <= getDaysNumderOfMounth() - 1;i++){
         days[i]= getDay(i+1)
     }
-
-    return days
+    return days;
 }
+
+export const getCalendarDays = (date) => {
+    const d = date?createDate(date):createDate()
+    const month = createMounth(new Date(d[2],d[4]))
+    const monthNumberOfDays = month.length
+    const prevMonthDays = createMounth(new Date(d[2],d[4]-1))
+    const nextMonthDays = createMounth(new Date(d[2],d[4]+1))
+    const firstDay = month[0]
+    const numbersDaysOfPrevMonth = firstDay[5] 
+    const numbersDaysOfNextMonth = 7 - (monthNumberOfDays + firstDay[5])%7
+    const numberOfCalendarDays = numbersDaysOfNextMonth + numbersDaysOfPrevMonth + monthNumberOfDays
+    let previndex = prevMonthDays.length-numbersDaysOfPrevMonth
+    let index = 0, nextindex = 0
+    const calendarDays = []
+    for(let i=0;i< numberOfCalendarDays;i++ ){
+        if(i<numbersDaysOfPrevMonth){
+            calendarDays[i] = prevMonthDays[previndex]
+            previndex++
+            continue
+        }
+        if(i<monthNumberOfDays + numbersDaysOfPrevMonth){
+            calendarDays[i] = month[index]
+            index++
+            continue
+        }
+        if(i<numberOfCalendarDays){
+            calendarDays[i] = nextMonthDays[nextindex]
+            nextindex++
+        }
+        
+    }
+    return calendarDays
+}
+
+export const daysNames = [
+    `Пт`,`Вт`,`Ср`,`Чт`,`Пт`,`Сб`,`Вс`
+]

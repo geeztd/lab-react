@@ -1,3 +1,40 @@
 .calendar{
-    @apply grid-cols-7 grid;
+    @apply w-1/3 m-auto mt-44;
+    .head{
+        @apply bg-slate-200 m-0 border-slate-400 border-solid border h-fit;
+        .date_and_but{
+            @apply flex justify-between items-center h-fit;
+            .date{
+                @apply w-1/2 flex justify-around h-fit;
+                h3{
+                    @apply m-0;
+                }
+            }
+            .buttons{
+                @apply flex justify-center;
+                button{
+                    @apply h-fit w-10 text-center;
+                }
+            }
+        }
+
+        .days_names{
+            @apply grid-cols-7 grid gap-1 text-center py-3 m-0;
+        }
+    }
+    .body{
+        @apply grid-cols-7 grid gap-1 self-center border m-0 border-slate-400 border-solid p-3;
+        div{
+            @apply m-0 text-center;
+        }
+        .other{
+            @apply text-slate-500;
+        }
+        .now{
+            @apply bg-slate-200;
+        }
+        .selected{
+            @apply border border-solid border-amber-700;
+        }
+    }
 }

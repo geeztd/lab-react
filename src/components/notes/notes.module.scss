@@ -1,0 +1,15 @@
+.item{
+    @apply relative bg-yellow-300;
+    .edit_menu{
+        @apply absolute w-full h-full top-0 left-0 bg-yellow-200;
+    }
+}
+.notes{
+    @apply w-1/5 flex flex-col;
+}
+.wraper{
+    @apply flex justify-between
+}
+.note{
+    @apply grid grid-cols-4 gap-1;
+}

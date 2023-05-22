@@ -1,0 +1,21 @@
+form{
+    @apply m-auto w-80 border border-solid border-slate-600;
+    .part{
+        @apply flex flex-col gap-2 m-5;
+    }
+    div{
+        @apply p-0;
+    }
+    .gender{
+        @apply flex justify-center gap-10 mb-4;
+    }
+    .phone{
+        @apply flex justify-center;
+    }
+    .but{
+        @apply flex justify-center m-5 ;
+    }
+    .error{
+        @apply border border-red-600 border-solid;
+    }
+}

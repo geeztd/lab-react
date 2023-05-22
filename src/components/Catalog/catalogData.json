@@ -1,0 +1,56 @@
+[
+    {
+        "name":"Asus X515MA",
+        "cost":1149,
+        "kol":25,
+        "img":"image/catalog/asusX515MA.jpg",
+        "text":"15.6\", 1920x1080 px,Intel Celeron N4020 2 -ядерный, Встроенная Intel UHD Graphics, ОЗУ 4 ГБ DDR4 , SSD 256 ГБ",
+        "new" : false,
+        "seil":0.1
+    },
+    {
+        "name":"ASUS VIVOBOOK 14",
+        "cost":1650,
+        "kol":15,
+        "img":"image/catalog/nout2.jpg",
+        "text":"14.0\", 1920 x 1080, IPS, Intel Core i3 1115G4, 3 000 МГц, 8 ГБ, SSD, 512 ГБ, синий, Windows 11 Pro",
+        "new" : true,
+        "seil":0
+    },
+    {
+        "name":"LENOVO IDEAPAD GAMING 3",
+        "cost":2790,
+        "kol":5,
+        "img":"image/catalog/nout3.jpg",
+        "text":"15.6\", 1920 x 1080, IPS, Intel Core i5 11300H, 3 100 МГц, 8 ГБ, SSD, 512 ГБ, 4 ГБ, черный, без ОС",
+        "new" :false,
+        "seil":0.15
+    },
+    {
+        "name":"ACER NITRO 5",
+        "cost":2990,
+        "kol":30,
+        "img":"image/catalog/nout4.jpg",
+        "text":"15.6\", 1920 x 1080, IPS, Intel Core i5 11400H, 2 700 МГц, 8 ГБ, SSD, 512 ГБ, 4 ГБ, черный, Linux",
+        "new" :true,
+        "seil":0.05
+    },
+    {
+        "name":"XIAOMI REDMIBOOK PRO 15 2022",
+        "cost":3300,
+        "kol":20,
+        "img":"image/catalog/nout5.jpg",
+        "text":"15.6\", 3200 x 2000, IPS, AMD Ryzen 7 6800H, 3 200 МГц, 16 ГБ, SSD, 512 ГБ, серый",
+        "new" :false,
+        "seil":0
+    },
+    {
+        "name":"XIAOMI BOOK PRO 16 2022",
+        "cost":4490,
+        "kol":16,
+        "img":"image/catalog/nout6.jpg",
+        "text":"16.0\", 3840 x 2400, OLED, Intel Core i7 1260P, 3 400 МГц, 16 ГБ, SSD, 512 ГБ, 4 ГБ, серый",
+        "new" :false,
+        "seil":0.1
+    }
+]
